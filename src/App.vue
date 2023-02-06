@@ -22,9 +22,15 @@ onMounted(() => {
 </script>
 
 <template>
-  <Currency v-for="currency in currencies" :currency="currency" />
+  <div class="currencies">
+    <Currency v-for="currency in currencies" :currency="currency" />
+  </div>
 </template>
 
 <style scoped>
-
+  .currencies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 </style>

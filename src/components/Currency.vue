@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <div>
+  <div class="currency">
     <div>
       <strong>
         {{ currency.name }}
@@ -23,6 +23,16 @@ defineProps({
 </template>
 
 <style scoped>
+  .currency {
+    padding: 10px 20px;
+    margin: 30px 20px;
+    width: 180px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background-color: #333;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .3);
+  }
+
   .price-area {
     display: flex;
   }
