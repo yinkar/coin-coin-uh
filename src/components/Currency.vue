@@ -12,11 +12,11 @@ defineProps({
       </strong>
     </div>
     <div class="price-area">
-      <div class="price">
-        {{ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(currency.price) }}
-      </div>
       <div class="direction" :class="{ up: currency?.direction, down: !currency?.direction }">
         {{ currency.direction ? '⬆' : '⬇' }}
+      </div>
+      <div class="price">
+        {{ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(currency.price) }}
       </div>
     </div>
   </div>
@@ -33,12 +33,19 @@ defineProps({
     box-shadow: 0px 5px 10px rgba(0, 0, 0, .3);
   }
 
+  .currency strong {
+    margin-bottom: 10px;
+    display: block;
+    line-height: 20px;
+  }
+
   .price-area {
     display: flex;
   }
 
   .direction {
     line-height: 1.3rem;
+    margin-right: 3px;
   }
 
   .up {
